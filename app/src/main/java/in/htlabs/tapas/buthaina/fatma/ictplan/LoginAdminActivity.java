@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by tap on 06/12/2015.
+ * Created by tap on 12/12/2015.
  */
-public class LoginActivity extends Activity implements View.OnClickListener {
+public class LoginAdminActivity extends Activity implements View.OnClickListener {
 
-    private EditText lo_et_user, lo_et_pass;
-    private Button lo_bt_login;
+    private EditText ad_et_user, ad_et_pass;
+    private Button ad_bt_login;
     private String username,password;
 
     // Progress Dialog
@@ -47,26 +47,26 @@ public class LoginActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.login_admin_activity);
 
         //setup input fields
-        lo_et_user = (EditText)findViewById(R.id.lo_et_user);
-        lo_et_pass = (EditText)findViewById(R.id.lo_et_pass);
+        ad_et_user = (EditText)findViewById(R.id.ad_et_user);
+        ad_et_pass = (EditText)findViewById(R.id.ad_et_pass);
 
         //setup buttons
-        lo_bt_login = (Button)findViewById(R.id.lo_bt_login);
+        ad_bt_login = (Button)findViewById(R.id.ad_bt_login);
 
         //register listeners
-        lo_bt_login.setOnClickListener(this);
+        ad_bt_login.setOnClickListener(this);
 
     }
     @Override
     public void onClick(View v) {
         // TODO Auto-generated method stub
         switch (v.getId()) {
-            case R.id.lo_bt_login:
-                username = lo_et_user.getText().toString().toLowerCase();
-                password = lo_et_pass.getText().toString();
+            case R.id.ad_bt_login:
+                username = ad_et_user.getText().toString().toLowerCase();
+                password = ad_et_pass.getText().toString();
                 new AttemptLogin().execute();
                 break;
         }
@@ -79,7 +79,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(LoginActivity.this);
+            pDialog = new ProgressDialog(LoginAdminActivity.this);
             pDialog.setMessage("Attempting login...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
@@ -104,7 +104,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
 
                 if (success == 1) {
                     Log.d("Login Successful!", json.toString());
-                    Intent i = new Intent(LoginActivity.this,AllotmentActivity.class);
+                    Intent i = new Intent(LoginAdminActivity.this,AllotmentActivity.class);
                     startActivity(i);
                     return json.getString(TAG_MESSAGE);
                 }else{
@@ -123,7 +123,7 @@ public class LoginActivity extends Activity implements View.OnClickListener {
             // dismiss the dialog once product deleted
             pDialog.dismiss();
             if (file_url != null){
-                Toast.makeText(LoginActivity.this, file_url, Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginAdminActivity.this, file_url, Toast.LENGTH_LONG).show();
             }
         }
     }

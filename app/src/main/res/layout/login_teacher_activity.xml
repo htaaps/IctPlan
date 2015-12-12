@@ -8,7 +8,7 @@
         android:layout_height="0dp"
         android:layout_weight="2">
         <TextView
-            android:id="@+id/lo_tv_result"
+            android:id="@+id/te_tv_result"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -23,7 +23,7 @@
         android:layout_height="0dp"
         android:layout_weight="1">
         <TextView
-            android:id="@+id/lo_tv_user"
+            android:id="@+id/te_tv_user"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -32,7 +32,7 @@
             android:gravity="center"/>
 
         <EditText
-            android:id="@+id/lo_et_user"
+            android:id="@+id/te_et_user"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
@@ -42,7 +42,7 @@
         android:layout_height="0dp"
         android:layout_weight="1">
         <TextView
-            android:id="@+id/lo_tv_pass"
+            android:id="@+id/te_tv_pass"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -50,7 +50,7 @@
             android:textSize="25dp"
             android:gravity="center"/>
         <EditText
-            android:id="@+id/lo_et_pass"
+            android:id="@+id/te_et_pass"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -61,14 +61,14 @@
         android:layout_height="0dp"
         android:layout_weight="1">
         <Button
-            android:id="@+id/lo_bt_login"
+            android:id="@+id/te_bt_login"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:text="Login"
             android:textSize="25dp"/>
         <Button
-            android:id="@+id/lo_bt_exit"
+            android:id="@+id/te_bt_exit"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"

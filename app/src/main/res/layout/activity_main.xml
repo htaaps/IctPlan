@@ -1,6 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/ma_bt_admin"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:text="Admine"
+        android:textSize="20dp"
+
+        android:gravity="center"/>
+    <Button
+        android:id="@+id/ma_bt_teacher"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:text="teacher"
+        android:textSize="20dp"
+
+        android:gravity="center"/>
+
+
+    <Button
+        android:id="@+id/ma_bt_student"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:text="Student"
+        android:textSize="20dp"
+        android:gravity="center"/>
+
 
 </LinearLayout>
